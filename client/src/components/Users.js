@@ -44,14 +44,9 @@ export const Users = () => {
                    <h5 key={user.first_name}> {`${user.first_name} ${user.last_name}`} </h5>
                    </Media.Body>
                    </Media>
-                   <li key={user.id}>{`${user.first_name} ${user.last_name}`}</li>
                     </Link>
-                   <li key={user.id}>{`${user.first_name} ${user.last_name}`}</li>
-
                  </div>
             ))}
-            <Media.Body>This is working but not that</Media.Body>
-            <li>this is a li list</li>
             </ul>
     
         </div>
