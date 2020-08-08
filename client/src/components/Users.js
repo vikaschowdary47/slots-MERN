@@ -35,7 +35,7 @@ export const Users = () => {
             <input type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder='search users'
             style={{margin:'50px 0',height:'37px',width:'300px',borderRadius:'5px',outline:'none'}}></input>
             <ul className="list-unstyled">
-            {filteredUsers.map(user => (
+            {users.map(user => (
                     // <div key={user.id} style={{display:'flex',flexDirection:'column'}}>
                         <Link to ={`/users/${user.id}`}>
                         <Media as="li" className='mb-5' key={user.id}>
