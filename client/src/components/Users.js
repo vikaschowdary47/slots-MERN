@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import Media from 'react-bootstrap/Media'
 
 export const Users = () => {
@@ -37,14 +37,14 @@ export const Users = () => {
             <ul className="list-unstyled">
             {filteredUsers.map(user => (
                     // <div key={user.id} style={{display:'flex',flexDirection:'column'}}>
-                        <Link to ={`/users/${user.id}`} key={user.id}>
+                        // <Link to ={`/users/${user.id}`} key={user.id}>
                         <Media as="li" className='mb-5' key={user.first_name}>
                     <img src={user.avatar} width='50' height='50' alt={user.first_name}/>
                     <Media.Body className='ml-3' key={user.id}>
                    <h5 key={user.first_name}> {`${user.first_name} ${user.last_name}`} </h5>
                    </Media.Body>
                    </Media>
-                   </Link>
+                //    {/* </Link> */}
                 // {/* </div> */}
             ))}
             </ul>
