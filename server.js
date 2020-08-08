@@ -22,7 +22,7 @@ dotenv.config();
 // connect to database
 
 mongoose.connect(
-    process.env.ATLAS_URI || 'mongodb+srv://vikas28:vikas28@cluster0.izv2q.mongodb.net/<dbname>?retryWrites=true&w=majority',
+    process.env.MONGO_URI || 'mongodb+srv://vikas28:vikas28@cluster0.izv2q.mongodb.net/<dbname>?retryWrites=true&w=majority',
     {useNewUrlParser: true, useUnifiedTopology: true},
     () => console.log('connected to mongodb database')
 )
