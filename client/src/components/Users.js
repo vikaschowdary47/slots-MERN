@@ -35,13 +35,13 @@ export const Users = () => {
             <input type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder='search users'
             style={{margin:'50px 0',height:'37px',width:'300px',borderRadius:'5px',outline:'none'}}></input>
             <ul className="list-unstyled">
-            {users.map(user => (
+            {filteredUsers.map(user => (
                     // <div key={user.id} style={{display:'flex',flexDirection:'column'}}>
-                        <Link to ={`/users/${user.id}`}>
-                        <Media as="li" className='mb-5' key={user.id}>
+                        <Link to ={`/users/${user.id}`} key={user.id}>
+                        <Media as="li" className='mb-5' key={user.first_name}>
                     <img src={user.avatar} width='50' height='50' alt={user.first_name}/>
                     <Media.Body className='ml-3' key={user.id}>
-                   <h5> {`${user.first_name} ${user.last_name}`} </h5>
+                   <h5 key={user.first_name}> {`${user.first_name} ${user.last_name}`} </h5>
                    </Media.Body>
                    </Media>
                    </Link>
